@@ -1,0 +1,133 @@
+/* *{
+border: 1px solid red;
+} */
+
+body{
+    background-image:url(fond.png); /* image dfond'ecran */
+    background-size: cover;
+    margin: 0;
+}
+span:first-of-type{
+    padding: 5px;
+    font-size: 1.5em;
+}
+.aside{
+    display: flex;
+    flex-direction:column;
+    padding:5px;
+    margin-left: 3px;
+
+}
+#langue{
+
+}
+.HR_aside{
+    color:black;
+    width:100px;
+    margin-left: 5px;
+}
+.grid-container-item1 span:first-of-type{
+    padding: 10px;
+    font-size:xx-large;
+}
+.icone{
+    
+}
+.color{
+    color:black;
+    text-decoration: none;
+}
+.color:hover{   
+     color:#4A412A;
+    text-decoration: none;
+
+}
+.lien{
+    color:black;
+    text-decoration: none;
+}
+.lien:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.grid-container{
+    display: grid;
+    margin-right: 20vw;
+    margin-left:20vw ;
+    margin-top: 3vh;
+    grid-template-columns: 1.4fr 3fr;
+    grid-template-areas:
+    "header header"
+    "barregauche case1"
+    "barregauche case2"
+    "barregauche case3"
+}
+
+.grid-item-1{
+    grid-area: header;
+    margin-bottom: 6px;
+    height: 20vh;
+    overflow:unset;
+}
+
+.grid-item-2{
+    grid-area: barregauche; 
+    height: 74vh;
+    
+}
+.grid-item-3{
+    grid-area: case1;
+    height: 74vh;
+    margin-left: 6px;
+}
+.grid-item-4{
+    grid-area: case2;
+    height: 74vh;
+    margin-left: 6px;
+}
+.image_de_profil{
+    margin-left:3px;
+    margin-top: 3px;
+    height: 180px;
+    width: 160px;
+    image-rendering: -webkit-optimize-contrast; /*optimise la qualite de la photo pour chrome*/
+    position:absolute;
+}
+.identite{
+    font-family:source sans pro; /* police d'affichage */
+    font-size: 100px;
+    font-weight: 1000;
+    color:black;
+    margin-left: 200px;
+
+}
+.grid-item{ /*tout les grid*/
+    background-color: #505050;
+    counter-increment: my-counter; /*incremente le compteur */ 
+    border-style: solid; 
+    border-color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.grid-item::after{
+    content: ' ' counter( my-counter); /*numeroté chaque item d'apres*/
+    font-size: xx-large; /*plus gros*/
+    font-weight: bold; /*gras*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+ [data-tooltip]:hover::before{
+    position:absolute;
+    content: attr(data-tooltip);
+    display: block;
+    width: 43px;
+    background-color:white;
+    bottom: calc(100%+10px);
+} 
+@media (max-width: 500px) {
+	.grid-item:.grid-item-1{
+	width: 20px;
+
+
+	}
+
+}
